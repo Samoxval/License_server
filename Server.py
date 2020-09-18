@@ -28,7 +28,7 @@ def check_in(rest_code: int, nickname: str):
 def add_list(rest_code: int, nickname: str):
     return serv_addons.add_list(str(rest_code), nickname)
 
-@app.get("/method")
+@app.get("/")
 def method(a: int, b: int):
     return random.uniform(a, b)
 
