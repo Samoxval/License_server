@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import random
 import uvicorn
 
-from License_server import serv_addons
+import serv_addons
 
 app = FastAPI()
 
@@ -29,8 +29,8 @@ def add_list(rest_code: int, nickname: str):
     return serv_addons.add_list(str(rest_code), nickname)
 
 @app.get("/")
-def method(a: int, b: int):
-    return random.uniform(a, b)
+def method():
+    return 'random.uniform(a, b)'
 
 
 if __name__ == "__main__":
