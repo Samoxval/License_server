@@ -27,3 +27,4 @@ starlette==0.13.6
 urllib3==1.25.10
 uvicorn==0.11.8
 websockets==8.1
+gunicorn==20.0.4
