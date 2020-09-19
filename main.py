@@ -19,6 +19,9 @@ def check_lic_day(rest_code: int):
 def check_lic_day(rest_code: int):
     return serv_addons.get_list(str(rest_code))
 
+@app.get('/get_file')
+def check_lic_day(rest_code: int):
+    return serv_addons.get_file(str(rest_code))
 
 @app.get('/check_in')
 def check_in(rest_code: int, nickname: str):
@@ -28,9 +31,12 @@ def check_in(rest_code: int, nickname: str):
 def add_list(rest_code: int, nickname: str):
     return serv_addons.add_list(str(rest_code), nickname)
 
+
+
+
 @app.get("/")
-def method():
-    return 'random.uniform(a, b)'
+def method(a: int, b: int):
+    return random.uniform(a, b)
 
 
 # if __name__ == "__main__":
