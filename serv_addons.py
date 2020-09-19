@@ -32,7 +32,7 @@ def check_lic_day(rest_code):
 def check_in(rest_code, nickname):
     lines = open(f'{rest_code}.txt', 'r', encoding='UTF-8').readlines()
     for line in lines:
-        if line == nickname:
+        if nickname in line:
             return '200'
         else:
             return 'Ivan Govnov'
